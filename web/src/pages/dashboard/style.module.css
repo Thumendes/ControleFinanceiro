@@ -1,0 +1,10 @@
+.container {
+  font-family: "Roboto", sans-serif;
+}
+.data {
+  display: grid;
+  grid-template-columns: 65% 35%;
+}
+.history {
+  padding: 50px;
+}

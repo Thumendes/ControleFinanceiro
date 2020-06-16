@@ -1,0 +1,27 @@
+.container {
+  font-family: "Noto Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container img {
+  width: 300px;
+  margin-bottom: 20px;
+}
+.container a {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fa0;
+}
+.container a:hover{
+  color: #f80;
+}
+.container a svg {
+  margin-right: 10px;
+}

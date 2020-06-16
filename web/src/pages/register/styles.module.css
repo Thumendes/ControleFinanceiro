@@ -1,0 +1,137 @@
+:root {
+  --primary: #fa0;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 45vw 55vw;
+  grid-template-areas: "info form";
+  font-family: "Roboto", sans-serif;
+  background: #f8fbfd;
+}
+.infoContainer {
+  grid-area: info;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoContainer img {
+  width: 500px;
+}
+.formContainer {
+  grid-area: form;
+  display: flex;
+  padding: 0 50px;
+  justify-content: center;
+  flex-direction: column;
+  background: #fff;
+  border-left: 1px solid #eee;
+}
+
+form {
+  max-width: 350px;
+}
+
+.formContainer h1 {
+  font-weight: 300;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.cardControl {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.cardControl.button {
+  height: auto;
+}
+.cardControl label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.cardControl input {
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 7.5px;
+  padding: 10px 12px;
+  outline: none;
+  font-size: 1.1rem;
+  transition: ease-in-out 200ms;
+}
+.cardControl input:focus {
+  border-color: var(--primary);
+  color: #414243;
+}
+.cardControl button {
+  outline: none;
+  cursor: pointer;
+  padding: 10px 12px;
+  border-radius: 7.5px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.cardControl button:disabled {
+  cursor: initial;
+  opacity: 0.5;
+}
+
+.signUp {
+  align-self: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+.signUp a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.back {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: 150ms;
+}
+.back:hover {
+  color: var(--primary);
+}
+.back svg {
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "form";
+  }
+  .formContainer {
+    align-items: center;
+    width: 100%;
+  }
+  .infoContainer {
+    display: none;
+  }
+}
+
+.error {
+  background-color: #ff3838;
+  box-shadow: 0 2px 10px #ff383855;
+  color: #fff;
+  margin: 10px 0;
+  padding: 3.5px 7.5px;
+  border-radius: 2px;
+}
+
+.success {
+  background-color: #61fd8d;
+  box-shadow: 0 2px 10px #61fd8d55;
+  color: #fff;
+  margin: 10px 0;
+  padding: 3.5px 7.5px;
+  border-radius: 2px;
+}

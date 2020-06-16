@@ -1,0 +1,25 @@
+.container {
+  padding-top: 50px;
+  padding-left: 50px;
+}
+.card {
+  padding: 30px;
+  background: #fff;
+  box-shadow: 1px 2px 5px #0001;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+.card h2 {
+  color: #555;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 50px;
+}
+.chart {
+  padding: 20px;
+}
+.budgets {
+  margin-top: 20px;
+}

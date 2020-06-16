@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  background: #fff;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  max-height: 75vh;
+  overflow: auto;
+}
+.container .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.1rem;
+}
+.container .header div {
+  display: flex;
+  align-items: center;
+}
+.container .header span {
+  font-size: 1.15rem;
+  margin-left: 10px;
+  font-weight: 700;
+}
+.container .header button {
+  outline: none;
+  cursor: pointer;
+  padding: 7.5px 12px;
+  font-size: 1.1rem;
+  border: none;
+  background-color: #fa0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #fa05;
+}
+.container li {
+  list-style: none;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  justify-content: space-between;
+}
+.container .title {
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+  color: #444;
+  font-family: "Noto Sans";
+}
+.container .value {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.container .budgetName {
+  font-family: "Noto Sans";
+  margin-right: 1rem;
+}
+
+.container .positive {
+  color: #33de61;
+}
+.container .negative {
+  color: #f24646;
+}

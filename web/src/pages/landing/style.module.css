@@ -1,0 +1,77 @@
+.container svg {
+  top: 0;
+  position: absolute;
+  z-index: -1000;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  color: #fff;
+}
+nav ul {
+  display: flex;
+}
+nav li {
+  list-style: none;
+}
+nav li a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 15px;
+}
+nav .dashboard {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 12px;
+  border-radius: 7.5px;
+  border: none;
+  background: #fff;
+  font-family: "Noto Sans";
+  text-decoration: none;
+}
+.dashboard svg {
+  z-index: 100;
+  position: static;
+  color: #000;
+  margin-right: 5px;
+}
+
+main {
+  padding: 150px 300px;
+  display: flex;
+  align-items: center;
+}
+main .title {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 20px;
+}
+main .text {
+  font-family: "Noto Sans", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+}
+main .buttons {
+  display: flex;
+  margin-top: 20px;
+}
+.buttons .link {
+  background: #fa0;
+  border: none;
+  padding: 10px 12px;
+  font-size: 1.1rem;
+  color: #fff;
+  margin-right: 20px;
+  border-radius: 7.5px;
+  box-shadow: 0 1px 5px #fa07;
+  cursor: pointer;
+  font-family: "Noto Sans";
+  text-decoration: none;
+}
+main img {
+  width: 600px;
+}
