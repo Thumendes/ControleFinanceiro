@@ -43,7 +43,7 @@ export default ({ close }) => {
           />
         </div>
         <div className={style.formControl}>
-          <label htmlFor="value">Qual o valor?</label>
+          <label htmlFor="value">Qual o valor inicial?</label>
           <input
             type="number"
             name="value"

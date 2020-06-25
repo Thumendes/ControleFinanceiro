@@ -7,6 +7,7 @@ export default ({ close }) => {
     title: "",
     value: "",
     budgetId: "",
+    tipo: "+",
   });
   const [available, setAvailable] = useState(false);
   const { budgets, addTransactions } = useContext(Context);
@@ -19,7 +20,8 @@ export default ({ close }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addTransactions(transData);
+    const value = Number(`${transData.tipo}${transData.value}`);
+    addTransactions({ ...transData, value });
     close();
   };
 
@@ -42,6 +44,16 @@ export default ({ close }) => {
             value={transData.title}
             onChange={handleInputChange}
           />
+        </div>
+        <div className={style.formControl}>
+          <label htmlFor="value">Qual o tipo?</label>
+          <select
+            name="tipo"
+            value={transData.tipo}
+            onChange={handleInputChange}
+          >
+            ]<option value="-">Saída</option>]<option value="+">Entrada</option>
+          </select>
         </div>
         <div className={style.formControl}>
           <label htmlFor="value">Qual o valor?</label>

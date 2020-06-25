@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/register";
+import InputMask from 'react-input-mask';
 import axios from "axios";
 
 export default ({ next }) => {
@@ -20,7 +21,7 @@ export default ({ next }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const { data } = await axios.get(
-      `https://viacep.com.br/ws/${stepOneData.cep}/json/`
+      `https://viacep.com.br/ws/${stepOneData.cep.replace('-', '')}/json/`
     );
     setStepTwoData({
       ...stepTwoData,
@@ -60,12 +61,18 @@ export default ({ next }) => {
       </div>
       <div className={styles.cardControl}>
         <label htmlFor="cep">CEP</label>
-        <input
-          type="text"
-          name="cep"
-          value={stepOneData.cep}
+        <InputMask
+          mask="99999-999"
           onChange={handleChangeInput}
-        />
+          value={stepOneData.cep}
+          name="cep">
+          {inputProps => (
+            <input
+              {...inputProps}
+              type="text"
+            />
+          )}
+        </InputMask>
       </div>
       <div className={styles.cardControl}>
         <label htmlFor="password">Senha</label>
